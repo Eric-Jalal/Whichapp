@@ -11,14 +11,14 @@ import java.util.List;
 
 @Dao
 public interface CountriesDao {
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM countriesentity")
     List<CountriesEntity> getAll();
 
-    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
+    @Query("SELECT * FROM countriesentity WHERE phone IN (:phoneCode)")
     List<CountriesEntity> loadAllByIds(int[] userIds);
 
-    @Query("SELECT * FROM user WHERE first_name LIKE :first AND "
-            + "last_name LIKE :last LIMIT 1")
+    @Query("SELECT * FROM countriesentity WHERE iso LIKE :iso AND "
+            + "last_name LIKE :name LIMIT 1")
     CountriesEntity findByName(String first, String last);
 
     @Insert

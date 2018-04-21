@@ -8,15 +8,40 @@ import android.arch.persistence.room.PrimaryKey;
 
 @Entity
 public class CountriesEntity {
+
+
     @PrimaryKey
-    private int uid;
+    private int phone;
 
-    @ColumnInfo(name = "first_name")
-    private String firstName;
+    @ColumnInfo(name = "iso")
+    private String iso;
 
-    @ColumnInfo(name = "last_name")
-    private String lastName;
+    @ColumnInfo(name = "name")
+    private String name;
 
-    // Getters and setters are ignored for brevity,
-    // but they're required for Room to work.
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getIso() {
+        return iso;
+    }
+
+    public void setIso(String iso) {
+        this.iso = iso;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
