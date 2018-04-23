@@ -1,5 +1,6 @@
 package net.teslaa.whichapptest;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.paging.DataSource;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
@@ -26,5 +27,5 @@ public interface CountryDao {
     public abstract DataSource.Factory<Integer, Country> getAll();
 
     @Query("SELECT * FROM countries")
-    public List<Country> getAllSync();
+    public LiveData<List<Country>> getAllSync();
 }

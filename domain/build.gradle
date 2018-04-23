@@ -25,9 +25,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Room
-    implementation "android.arch.persistence.room:runtime:1.1.0-beta3"
-    implementation "android.arch.persistence.room:rxjava2:1.1.0-beta3"
-    annotationProcessor "android.arch.persistence.room:compiler:1.1.0-beta3"
+    implementation "android.arch.persistence.room:runtime:1.1.0-beta1"
+    implementation "android.arch.persistence.room:rxjava2:1.1.0-beta1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.0-beta1"
 
     // Architecture Life Cycle
     implementation "android.arch.lifecycle:extensions:1.1.1"
@@ -49,8 +49,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-    compile project(path: ':data')
-}
-repositories {
-    mavenCentral()
+    implementation project(path: ':data')
 }

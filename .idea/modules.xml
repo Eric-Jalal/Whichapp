@@ -5,11 +5,13 @@
       <module fileurl="file://$PROJECT_DIR$/Whichapp-test.iml" filepath="$PROJECT_DIR$/Whichapp-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/WhichappTest.iml" filepath="$PROJECT_DIR$/WhichappTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/data/presentation2.iml" filepath="$PROJECT_DIR$/data/presentation2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/database.iml" filepath="$PROJECT_DIR$/domain/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database/database.iml" filepath="$PROJECT_DIR$/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/peresentation/peresentation.iml" filepath="$PROJECT_DIR$/peresentation/peresentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data/presentation2.iml" filepath="$PROJECT_DIR$/data/presentation2.iml" />
     </modules>
   </component>
 </project>

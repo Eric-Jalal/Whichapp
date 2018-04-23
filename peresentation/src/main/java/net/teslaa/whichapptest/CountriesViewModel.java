@@ -1,5 +1,7 @@
 package net.teslaa.whichapptest;
 
+import android.annotation.SuppressLint;
+import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
 import android.arch.paging.LivePagedListBuilder;
@@ -20,7 +22,8 @@ import io.reactivex.functions.Consumer;
 public class CountriesViewModel extends ViewModel {
     private static final String TAG = "CountriesViewModel";
 
-    public LiveData<PagedList<Country>> countries;
+    public LiveData countries;
+    private final LiveData<List<Country>> getCountriesViewModel;
 
     private GetCountriesUseCase getCountriesUseCase;
     private SaveCountriesUseCase saveCountriesUseCase;
@@ -30,6 +33,7 @@ public class CountriesViewModel extends ViewModel {
                               SaveCountriesUseCase saveCountriesUseCase) {
         this.getCountriesUseCase = getCountriesUseCase;
         this.saveCountriesUseCase = saveCountriesUseCase;
+        getCountriesViewModel = appDatabase.countryDao().getAllSync();
 
         PagedList.Config pagedListConfig =
                 (new PagedList.Config.Builder()).setEnablePlaceholders(true)
@@ -40,6 +44,7 @@ public class CountriesViewModel extends ViewModel {
                 .build();
     }
 
+    @SuppressLint("CheckResult")
     void getCountries() {
         getCountriesUseCase.execute(null).subscribe(new Consumer<List<Country>>() {
             @Override
@@ -64,5 +69,9 @@ public class CountriesViewModel extends ViewModel {
                 Log.e(TAG, throwable.toString());
             }
         });
+    }
+
+    public LiveData<List<Country>> getAllof() {
+        return getCountriesViewModel;
     }
 }
