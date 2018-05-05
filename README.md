@@ -1,6 +1,6 @@
 # Whichapp-Test
 
-This repository containes a simple list application containing WhichApp countries list API for retrieving and loading in optimized manner with using Dagger2 as DI and RoomDB for chaching and LiveData for fetching the list.
+This repository containes a simple list application containing WhichApp countries list API for retrieving and loading in optimized manner with using Dagger2 as DI and RoomDB for chaching and LiveData for fetching the list and Retrofit for networking.
 The project base structure is clean code according to this manner described here: https://github.com/android10/Android-CleanArchitecture
 
 
