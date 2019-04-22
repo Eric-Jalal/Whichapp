@@ -3,9 +3,13 @@
 This repository containes a simple list application containing WhichApp countries list API for retrieving and loading in optimized manner with using Dagger2 as DI and RoomDB for chaching and LiveData for fetching the list and Retrofit for networking.
 The project base structure is clean code according to this manner described here: https://github.com/android10/Android-CleanArchitecture
 
+# Task description
+By calling "https://api.whichapp.com/v1/countries" you will receive some countries data. write an android application that retrieves them, caches them, and loads them into a Recyclerview. The Recyclerview has a header with the text "Header Section" and a footer with the text "Footer section" at the beginning and the end of the list. 
+Preferably do this using Retrofit for network calls, Room for caching, ViewModel and LiveData for UI manipulation, Dagger for dependency injection, Butterknife for view injection. If not familiar with any of these libraries, use your own method of work.
+Non-functional requirements such as clean architecture, linting, naming habits, readability, comments, change management, resource management, memory management, etc. will be noticed.
 
 -----------------------------------------------------------------------
-MIT License
+```MIT License
 
 Copyright (c) 2018 Amir J.Hosseini
 
@@ -26,3 +30,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
